@@ -68,7 +68,7 @@ const Wrapper = styled.div`
 }
 .preview img{
   display:block;
-  max-height:65vh;
+  max-height:50vh;
   max-width:50vw;
   border:${Theme.imgBorder};
   grid-column-start: 1;
