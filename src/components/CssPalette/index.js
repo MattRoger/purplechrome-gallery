@@ -1,16 +1,17 @@
-const darkColor='#1F1F1F'
-const mainColor='#f5f5f5'
-const borderColor="#E0E0E0"
+const darkPurple="#872B86";
+const mediumPurple="#A65CDB";
+const lightPurple="#AF65CF";
+const lightColor="#EDD4ED";
+const highlight="#E95DE0";
+
+
+
 const theme={    
-mainColor:mainColor,
-darkColor:darkColor,
-borderColor:borderColor,
+background:darkPurple,
 highlightColor:"37A3A3",
-logoText:`'Great Vibes', cursive`,
-headingText:`'Lato', sans-serif`,
-pText:`'Montserrat', sans-serif`,
-textShadow:`2px 4px 7px ${darkColor}`,
-imgBorder:`.25rem solid ${borderColor}`,
+textColor:lightColor,
+border: `.25rem solid ${mediumPurple}`,
+borderHover:`.25rem solid ${highlight}`,
 }
 
 

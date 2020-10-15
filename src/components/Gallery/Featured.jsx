@@ -4,6 +4,9 @@ import Description from "./Description";
 import Theme from '../CssPalette'
 
 const Wrapper = styled.div`
+img{
+  border:${Theme.border};
+}
 .fullScreen
  {
     display: grid;
@@ -70,7 +73,6 @@ const Wrapper = styled.div`
   display:block;
   max-height:50vh;
   max-width:50vw;
-  border:${Theme.imgBorder};
   grid-column-start: 1;
   grid-column-end: 4;
   margin: 0 auto;
@@ -98,6 +100,7 @@ cursor: pointer;
 margin-bottom:1rem;
 `;
 
+
 const Featured = (props) => {
   const photos = props.photos;
   const selected = props.selected;
@@ -112,21 +115,21 @@ const Featured = (props) => {
   handleSelected();
 
   const handleArrowKeys = () => {
-    let arrowPress = 0;
-    document.addEventListener("keydown", function (event) {
-        arrowPress = event.which;
-        console.log(arrowPress);
-        if (arrowPress == 39) {
-            console.log("go forward");
-            props.handleGoForward();
-        }
-        if (arrowPress == 37) {
-            console.log("go back");
-            props.handleGoBack()
-        }else{
-            console.log("none")
-        }
-    })
+    // let arrowPress = 0;
+    // document.addEventListener("keydown", function (event) {
+    //     arrowPress = event.which;
+    //     console.log(arrowPress);
+    //     if (arrowPress == 39) {
+    //         console.log("go forward");
+    //         props.handleGoForward();
+    //     }
+    //     if (arrowPress == 37) {
+    //         console.log("go back");
+    //         props.handleGoBack()
+    //     }else{
+    //         console.log("none")
+    //     }
+    // })
   };
   handleArrowKeys();
   return (

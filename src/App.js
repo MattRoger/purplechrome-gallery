@@ -1,18 +1,26 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
+import Theme from './components/CssPalette';
 
-import Gallery from './components/Gallery/Gallery';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Gallery from "./components/Gallery/Gallery";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+const Wrapper = styled.div`
+background-color:${Theme.background};
+color:${Theme.textColor};
+min-height:100vh;
+
+`
 
 function App() {
   return (
-    <>
-   <Header/>
-    <Gallery/>
-    <Footer/>
-    </>
+    <Wrapper>
+      <Header />
+      <Gallery />
+      <Footer />
+    </Wrapper>
   );
 }
 
 export default App;
-

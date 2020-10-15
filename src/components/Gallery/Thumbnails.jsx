@@ -4,18 +4,20 @@ import styled from "styled-components";
 import Theme from '../CssPalette'
 
 
+const Wrapper = styled.div` 
+  width:60vw;
+  margin:auto;
+  cursor: pointer;
+  img {
+    max-height:12vh;
+    border:${Theme.border};
+    margin:.25rem;
+  }
+  img:hover{
+    border:${Theme.borderHover};
+  }
+`;
 const Thumbnails = (props) => {
-  const Wrapper = styled.div`
-    display: flex;
-    justify-content:space-evenly;
-    width:90vw;
-    margin:auto;
-    cursor: pointer;
-    img {
-      max-height:12vh;
-      border:${Theme.imgBorder}
-    }
-  `;
 
  return (
     <Wrapper>

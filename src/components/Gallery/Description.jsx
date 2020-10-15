@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import styled from "styled-components";
-import Theme from '../CssPalette'
+import Theme from '../CssPalette';
 
 const Wrapper= styled.div`
 margin:auto;
@@ -21,7 +21,8 @@ h3{
 p{
     font-family:${Theme.pText};
 }
-    `
+`
+
 const Description =(props)=>{
 
 return(
