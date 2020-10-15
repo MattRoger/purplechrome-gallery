@@ -30,7 +30,7 @@ return(
        <div className="description-wrapper">
         <h1>{props.title}</h1>  
         <h3>{props.location}</h3> 
-        <p>{props.description}</p>
+        <p>{props.caption}</p>
         </div>       
     </Wrapper>
     </>

@@ -104,7 +104,7 @@ const Featured = (props) => {
   let photo = " ";
   const handleSelected = () => {
     for (let i = 0; i < photos.length; i++) {
-      if (photos[i].key === selected) {
+      if (photos[i].id === selected) {
         return (photo = photos[i]);
       }
     }
@@ -116,11 +116,11 @@ const Featured = (props) => {
     document.addEventListener("keydown", function (event) {
         arrowPress = event.which;
         console.log(arrowPress);
-        if (arrowPress === 39) {
+        if (arrowPress == 39) {
             console.log("go forward");
             props.handleGoForward();
         }
-        if (arrowPress === 37) {
+        if (arrowPress == 37) {
             console.log("go back");
             props.handleGoBack()
         }else{
@@ -132,16 +132,15 @@ const Featured = (props) => {
   return (
     <Wrapper>
       <div className={props.display}>
-          <div className="description">
+       <div className="description">
               <Description 
                 title={photo.title}
                 location={photo.location}
-                description={photo.description} 
-                tags={photo.tags}           
+                caption={photo.caption}                         
                 />
           </div>
-            <img src={photo.src} alt={photo.title} />              
-                <Button onClick={props.handleGoBack} className="backward">
+        <img src={photo.src} alt={photo.title} />
+        <Button onClick={props.handleGoBack} className="backward">
                   {" "}{"<"}{" "}
                 </Button>
 
@@ -152,9 +151,7 @@ const Featured = (props) => {
                 <Button onClick={props.handleGoForward} className="forward">
                   {" "}{">"}{" "}
                 </Button> 
-
-               
-          </div>
+      </div>
     </Wrapper>
   );
 };

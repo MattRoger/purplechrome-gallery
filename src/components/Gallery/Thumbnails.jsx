@@ -22,7 +22,7 @@ const Thumbnails = (props) => {
       {props.photos.map((photo) =>
        (<Thumbnail 
         src={photo.src} 
-        id={photo.key} key={photo._id} 
+        id={photo.id} key={photo.id} 
         alt={props.alt}
         handleSetSelected={props.handleSetSelected} />
           ))

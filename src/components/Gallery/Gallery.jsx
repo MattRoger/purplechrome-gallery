@@ -19,12 +19,7 @@ class Gallery extends Component{
     }
     
     
-    handleSetKey = () => {
-       const tempGal= this.handlePhotoKey;
-        this.setState({
-            gallery:tempGal
-        })
-    }
+
 
 
 handleGoForward = () =>{
@@ -76,8 +71,7 @@ handleSetSelected = (select)=>{
 
 render(){
     return(
-        <Wrapper>
-        {this.handleSetKey}
+        <Wrapper>        
         <Featured
          photos={this.state.gallery}
          selected={this.state.selected}
