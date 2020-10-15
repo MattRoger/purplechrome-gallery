@@ -1,5 +1,6 @@
 {
   "name": "purplechrome-gallery",
+  "homepage": "https://MattRoger.github.io/purplechrome-gallery",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
