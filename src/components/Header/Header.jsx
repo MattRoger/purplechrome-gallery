@@ -28,8 +28,7 @@ const Header = () => {
     font-family:${Theme.displayText};
   }
   @media (max-width:425px){
-    text-align:center;
-        
+    text-align:center;        
     display:block;
     h1{
       font-size:1.25rem;

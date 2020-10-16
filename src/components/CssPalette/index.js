@@ -6,7 +6,7 @@ const highlight="#E95DE0";
 
 
 
-const theme={    
+const Theme={    
     headerColor:`#4E184D`,   
     background:darkPurple,
     highlightColor:highlight,
@@ -22,5 +22,5 @@ const theme={
 
 
 
-export default theme;
+export default Theme;
 
