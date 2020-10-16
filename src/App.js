@@ -10,7 +10,8 @@ const Wrapper = styled.div`
 background-color:${Theme.background};
 color:${Theme.textColor};
 min-height:100vh;
-
+max-width:100vw;
+box-sizing:border-box;
 `
 
 function App() {

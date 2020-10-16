@@ -77,28 +77,31 @@ img{
   grid-column-end: 4;
   margin: 0 auto;
 }
-
 .preview .description{
-  margin-left:2rem;
   grid-column-start: 4;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
   text-align:left;
+  justify-self: start;
 }
-
+p{
+  color:${Theme.textColor};
+  background: none;
+  border: none;
+  font-size:1.5rem;
+  font-family:${Theme.pText};
+  padding:2rem;
+  display:inline;
+  cursor: pointer;
+  margin-bottom:1rem;
+}
+button:hover{
+  color:${Theme.highlightColor};
+}
 `;
 
-const Button = styled.div`
-background: none;
-border: none;
-font-size:1.5rem;
-font-family:${Theme.headingText};
-padding:2rem;
-display:inline;
-cursor: pointer;
-margin-bottom:1rem;
-`;
+
 
 
 const Featured = (props) => {
@@ -143,17 +146,17 @@ const Featured = (props) => {
                 />
           </div>
         <img src={photo.src} alt={photo.title} />
-        <Button onClick={props.handleGoBack} className="backward">
+        <p onClick={props.handleGoBack} className="backward">
                   {" "}{"<"}{" "}
-                </Button>
+                </p>
 
-                <Button onClick={props.handleDisplay} className="toggle-size">
+                <p onClick={props.handleDisplay} className="toggle-size">
                   {props.display === "preview" ? "Full Screen" : "Preview"}
-                </Button>
+                </p>
 
-                <Button onClick={props.handleGoForward} className="forward">
+                <p onClick={props.handleGoForward} className="forward">
                   {" "}{">"}{" "}
-                </Button> 
+                </p> 
       </div>
     </Wrapper>
   );

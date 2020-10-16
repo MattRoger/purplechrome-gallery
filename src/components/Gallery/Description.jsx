@@ -3,23 +3,23 @@ import styled from "styled-components";
 import Theme from '../CssPalette';
 
 const Wrapper= styled.div`
-margin:auto;
+
 padding-bottom:2rem;
-.description-wrapper{
-  
+width:80%;
+h1,h3{
+    font-family:${Theme.displayText};
 }
 h1{
-    font-family:${Theme.headingText};
     font-size:2rem;
     padding-bottom:1.25rem;
 }
-h3{
-    font-family:${Theme.headingText};
-    font-size:1.25rem;
+h3{    
+    font-size:2rem;
     padding-bottom:1rem;
 }    
-p{
-    font-family:${Theme.pText};
+.caption{
+font-size:1.25rem;
+line-height:1.5rem;
 }
 `
 
@@ -27,12 +27,10 @@ const Description =(props)=>{
 
 return(
     <>
-    <Wrapper>
-       <div className="description-wrapper">
+    <Wrapper>       
         <h1>{props.title}</h1>  
         <h3>{props.location}</h3> 
-        <p>{props.caption}</p>
-        </div>       
+        <p className='caption'>{props.caption}</p>              
     </Wrapper>
     </>
 )
