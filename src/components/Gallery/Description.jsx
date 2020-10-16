@@ -21,6 +21,18 @@ h3{
 font-size:1.25rem;
 line-height:1.5rem;
 }
+@media (max-width:425px){
+    width:95%;
+    h1{
+        font-size:1.25rem;
+    }
+    h3{
+        font-size:1rem
+    }
+    .caption{
+        font-size:.9rem;
+    }
+}
 `
 
 const Description =(props)=>{

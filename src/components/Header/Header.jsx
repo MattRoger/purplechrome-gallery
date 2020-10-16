@@ -10,7 +10,7 @@ const Header = () => {
   align-items:baseline;
   justify-content:space-around;
   color:${Theme.lightPurple};
-  border-bottom:.25rem solid ${Theme.headerBorder};
+  border-bottom:.25rem solid;
   margin-bottom:1rem;
   h1, h2{
       font-family:${Theme.cursiveText};
@@ -27,7 +27,19 @@ const Header = () => {
   span{
     font-family:${Theme.displayText};
   }
-
+  @media (max-width:425px){
+    text-align:center;
+        
+    display:block;
+    h1{
+      font-size:1.25rem;
+      padding:.25rem;
+    };
+    h2{
+      font-size:1rem;
+      padding:.25rem;
+    };
+  }
   `;
 
  return (

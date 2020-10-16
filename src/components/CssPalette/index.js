@@ -12,6 +12,7 @@ const theme={
     highlightColor:highlight,
     textColor:lightColor,
     lightPurple:lightPurple,
+    mediumPurple:mediumPurple,
     border: `.25rem solid ${mediumPurple}`,
     borderHover:`.25rem solid ${highlight}`,
     displayText:`'Big Shoulders Display', cursive`,

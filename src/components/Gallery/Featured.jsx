@@ -12,7 +12,6 @@ img{
     display: grid;
     grid-template-columns: 15% 1fr 15%;
     grid-template-rows: 5% 1fr 5%;
-    z-index: 1000;
     box-sizing: border-box;
     margin: auto;
     height: 100vh;
@@ -67,7 +66,6 @@ img{
   display:grid;
   grid-template-columns:2.5% 45% 2.5% 50%;
   grid-template-rows:1fr 5rem;
-  padding-left:1vw;
 }
 .preview img{
   display:block;
@@ -83,7 +81,7 @@ img{
   grid-row-start: 1;
   grid-row-end: 2;
   text-align:left;
-  justify-self: start;
+ 
 }
 p{
   color:${Theme.textColor};
@@ -96,13 +94,58 @@ p{
   cursor: pointer;
   margin-bottom:1rem;
 }
-button:hover{
+.btn:hover{
   color:${Theme.highlightColor};
 }
+@media (max-width: 768px){
+  padding-left:1rem;
+  .description{
+    padding-left:3rem
+  };
+  .fullScreen img {
+    max-width: 90%;    
+  }
+}
+@media (max-width:425px){
+  padding:0;
+  .preview{
+   grid-template-columns: 25% 1fr 25%;
+   grid-template-rows:1fr;
+  }
+  .preview img{
+    grid-column-start:1;
+    grid-column-end:4;
+    grid-row-start:1;
+    grid-row-end:2;    
+    max-width:90vw;
+  }
+  .preview .backward{
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:1;
+    grid-column-end:2;
+  }
+  .preview .toggle-size{
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:2;
+    grid-column-end:3;
+    font-size:1rem;
+  }
+  .preview forward{
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:3;
+    grid-column-end:4;
+  }
+  .preview .description{
+    grid-column-start:1;
+    grid-column-end:4;
+    grid-row-start:3;
+    grid-row-end:4;
+  }
+}
 `;
-
-
-
 
 const Featured = (props) => {
   const photos = props.photos;
@@ -146,15 +189,15 @@ const Featured = (props) => {
                 />
           </div>
         <img src={photo.src} alt={photo.title} />
-        <p onClick={props.handleGoBack} className="backward">
+        <p onClick={props.handleGoBack} className="backward btn">
                   {" "}{"<"}{" "}
                 </p>
 
-                <p onClick={props.handleDisplay} className="toggle-size">
+                <p onClick={props.handleDisplay} className="toggle-size btn">
                   {props.display === "preview" ? "Full Screen" : "Preview"}
                 </p>
 
-                <p onClick={props.handleGoForward} className="forward">
+                <p onClick={props.handleGoForward} className="forward btn">
                   {" "}{">"}{" "}
                 </p> 
       </div>

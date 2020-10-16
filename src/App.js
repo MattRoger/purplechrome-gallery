@@ -12,6 +12,7 @@ color:${Theme.textColor};
 min-height:100vh;
 max-width:100vw;
 box-sizing:border-box;
+position:relative;
 `
 
 function App() {

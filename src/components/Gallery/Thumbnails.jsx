@@ -16,6 +16,11 @@ const Wrapper = styled.div`
   img:hover{
     border:${Theme.borderHover};
   }
+  @media (max-width:425px){
+    img{
+      max-height:8vh;
+    }
+  }
 `;
 const Thumbnails = (props) => {
 
